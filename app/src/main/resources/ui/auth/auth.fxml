@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<StackPane xmlns:fx="http://javafx.com/fxml" fx:controller="lab8.client.gui.AuthController"
+           prefHeight="600" prefWidth="900"
+           stylesheets="@../global_style.css" styleClass="root">
+
+    <VBox alignment="CENTER" spacing="20">
+        <padding>
+            <Insets top="40" right="40" bottom="40" left="40"/>
+        </padding>
+
+        <VBox spacing="10" alignment="CENTER">
+            <Label fx:id="appTitleLabel"
+                   style="-fx-font-size: 32px; -fx-font-weight: bold; -fx-text-fill: linear-gradient(to right, #64b5f6, #42a5f5); -fx-effect: dropshadow(gaussian, rgba(100, 181, 246, 0.3), 10, 0, 0, 0);"/>
+            <Label fx:id="appSubtitleLabel"
+                   style="-fx-font-size: 14px; -fx-text-fill: #b0bec5; -fx-font-style: italic;"/>
+        </VBox>
+
+        <HBox fx:id="localeBox" alignment="CENTER" spacing="10">
+            <Label fx:id="languageLabel"/>
+        </HBox>
+
+        <VBox styleClass="card" maxWidth="450" minHeight="420">
+            <padding>
+                <Insets top="20" right="30" bottom="20" left="30"/>
+            </padding>
+            <TabPane fx:id="tabPane" tabClosingPolicy="UNAVAILABLE">
+                <Tab fx:id="loginTab" closable="false">
+                    <VBox spacing="15" alignment="CENTER" style="-fx-background-color: transparent; -fx-padding: 20px;">
+                        <VBox spacing="5">
+                            <Label fx:id="usernameLoginLabel"/>
+                            <TextField fx:id="loginUsername"
+                                       styleClass="text-input"/>
+                        </VBox>
+                        <VBox spacing="5">
+                            <Label fx:id="passwordLoginLabel"/>
+                            <PasswordField fx:id="loginPassword" styleClass="text-input"/>
+                        </VBox>
+                        <Button fx:id="loginButton" onAction="#handleLogin" styleClass="button-primary"/>
+                        <Label fx:id="loginStatus" styleClass="error-message" minHeight="0"/>
+                    </VBox>
+                </Tab>
+
+                <!-- Вкладка регистрации -->
+                <Tab fx:id="registerTab" text="Регистрация" closable="false">
+                    <VBox spacing="15" alignment="CENTER" style="-fx-background-color: transparent; -fx-padding: 20px;">
+                        <VBox spacing="5">
+                            <Label fx:id="usernameRegisterLabel" text="Имя пользователя"/>
+                            <TextField fx:id="registerUsername" promptText="Введите имя" styleClass="text-input"/>
+                        </VBox>
+                        <VBox spacing="5">
+                            <Label fx:id="passwordRegisterLabel" text="Пароль"/>
+                            <PasswordField fx:id="registerPassword" promptText="Введите пароль"
+                                           styleClass="text-input"/>
+                        </VBox>
+                        <VBox spacing="5">
+                            <Label fx:id="confirmPasswordLabel" text="Подтвердите пароль"/>
+                            <PasswordField fx:id="registerPasswordConfirm" promptText="Повторите пароль"
+                                           styleClass="text-input"/>
+                        </VBox>
+                        <Button fx:id="registerButton" onAction="#handleRegister"
+                                styleClass="button-primary"/>
+                        <Label fx:id="registerStatus" styleClass="error-message" minHeight="0"/>
+                    </VBox>
+                </Tab>
+            </TabPane>
+        </VBox>
+
+        <VBox spacing="5" alignment="CENTER">
+            <Label text="© 2025 Ekaterina Galak :)"
+                   style="-fx-font-size: 12px; -fx-text-fill: #757575;"/>
+        </VBox>
+    </VBox>
+</StackPane> 

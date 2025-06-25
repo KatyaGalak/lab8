@@ -1,0 +1,603 @@
+.root {
+    -fx-background-color: linear-gradient(to top left, #1e1e2e 0%, #2d2d44 50%, #1a1a2e 100%);
+}
+
+/* --- Единый фон для диалоговых окон --- */
+.root, .dialog-pane, .scroll-pane, .card, .text-field, .combo-box,
+.check-box, .date-picker {
+    -fx-background-radius: 0;
+    -fx-border-color: transparent;
+}
+
+/* --- Основные стили --- */
+.label {
+    -fx-text-fill: #e0e0e0;
+    -fx-font-size: 14px;
+}
+
+.text-input {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-background-radius: 10;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #9e9e9e;
+    -fx-border-color: transparent;
+    -fx-padding: 12 15;
+    -fx-font-size: 14px;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-highlight-fill: rgba(66, 165, 245, 0.4);
+}
+
+/* --- Стили для карточек --- */
+.card {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 20, 0, 0, 0);
+    -fx-border-width: 0;
+}
+
+/* --- Стили кнопок --- */
+.button {
+    -fx-background-radius: 20;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+}
+
+.button-primary {
+    -fx-background-color: linear-gradient(to right, #2196F3, #1976D2);
+    -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 0.3), 8, 0, 0, 0);
+}
+
+.button-destructive {
+    -fx-background-color: linear-gradient(to right, #f69b9b, #424242);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 8, 0, 0, 0);
+}
+
+.button-secondary {
+    -fx-background-color: linear-gradient(to right, #9e9e9e, #757575);
+    -fx-effect: dropshadow(gaussian, rgba(158, 158, 158, 0.3), 8, 0, 0, 0);
+}
+
+.button:focused, .text-input:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-box-border: transparent;
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* --- Стили для вкладок --- */
+.tab-pane {
+    -fx-background-color: transparent;
+    -fx-tab-min-height: 40px;
+    -fx-tab-max-height: 40px;
+}
+
+.tab-pane .tab-header-area {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.tab-pane .tab-header-background {
+    -fx-background-color: transparent;
+}
+
+.tab {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-background-radius: 10 10 0 0;
+    -fx-opacity: 0.6;
+    -fx-padding: 8px 20px;
+}
+
+.tab:selected {
+    -fx-background-color: transparent;
+    -fx-opacity: 1;
+    -fx-border-color: #42a5f5;
+    -fx-border-width: 0 0 3px 0;
+}
+
+.tab:selected .focus-indicator {
+    -fx-border-color: transparent;
+}
+
+.tab .tab-label {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.tab-content-area {
+    -fx-background-color: transparent;
+}
+
+/* --- Стили для MenuBar --- */
+.menu-bar {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+}
+
+.menu-bar .label {
+    -fx-text-fill: #e0e0e0;
+}
+
+.menu:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+}
+
+.context-menu {
+    -fx-background-color: #2a2a3e;
+    -fx-background-radius: 6;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 10, 0, 0, 2);
+    -fx-padding: 4;
+}
+
+.context-menu .menu-item {
+    -fx-padding: 8 12;
+    -fx-border-color: transparent;
+}
+
+.menu-item .label {
+    -fx-text-fill: #e0e0e0;
+}
+
+.menu-item:focused, .menu-item:hover {
+    -fx-background-color: rgba(66, 165, 245, 0.2);
+    -fx-background-radius: 4;
+}
+
+/* --- Стили для таблиц --- */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+}
+
+.table-view .column-header {
+    -fx-background-color: #424242;
+    -fx-border-color: #616161;
+    -fx-border-width: 0 0 1 0;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #e0e0e0;
+    -fx-font-weight: bold;
+}
+
+.table-view .table-cell {
+    -fx-border-color: transparent;
+    -fx-padding: 8 12;
+    -fx-text-fill: #e0e0e0;
+}
+
+/* --- Стили для строк таблицы --- */
+.table-row-cell {
+    -fx-background-color: transparent;
+}
+
+.table-row-cell .text {
+    -fx-fill: #e0e0e0;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: rgba(255, 255, 255, 0.02);
+}
+
+.table-row-cell:even {
+    -fx-background-color: transparent;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: rgba(66, 165, 245, 0.1);
+}
+
+/* --- Стили для выделения строк таблицы --- */
+.table-view .table-row-cell:selected {
+    -fx-background-color: #1976d2 !important;
+    -fx-background-insets: 0 !important;
+    -fx-background-radius: 0 !important;
+    -fx-text-fill: white !important;
+}
+
+.table-view .table-row-cell:selected .table-cell {
+    -fx-background-color: #1976d2 !important;
+    -fx-text-fill: white !important;
+}
+
+.table-view .table-row-cell:selected .table-cell .text {
+    -fx-fill: white !important;
+}
+
+.table-view:focused .table-row-cell:selected {
+    -fx-background-color: #1565c0 !important;
+}
+
+.table-view:focused .table-row-cell:selected .table-cell {
+    -fx-background-color: #1565c0 !important;
+}
+
+.table-view .table-row-cell:selected:hover {
+    -fx-background-color: #0d47a1 !important;
+}
+
+.table-view .table-row-cell:selected:hover .table-cell {
+    -fx-background-color: #0d47a1 !important;
+}
+
+/* --- Стили для скроллбаров --- */
+.scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-background-radius: 10;
+}
+
+.scroll-bar .track {
+    -fx-background-color: transparent;
+    -fx-background-radius: 10;
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+/* --- Стили для ScrollPane --- */
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+    -fx-border-color: transparent;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.transparent-scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+    -fx-border-color: transparent;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.transparent-scroll-pane > .viewport,
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.transparent-scroll-pane .scroll-bar:vertical,
+.transparent-scroll-pane .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+
+.transparent-scroll-pane .scroll-bar:vertical .thumb,
+.transparent-scroll-pane .scroll-bar:horizontal .thumb {
+    -fx-background-color: rgba(66, 165, 245, 0.3);
+    -fx-background-radius: 10;
+}
+
+/* --- Стили для ComboBox --- */
+.combo-box {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-background-radius: 10;
+    -fx-border-color: transparent;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.combo-box .arrow-button {
+    -fx-background-color: transparent;
+}
+
+.combo-box .arrow {
+    -fx-background-color: #e0e0e0;
+}
+
+.combo-box .list-cell,
+.combo-box-popup .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #e0e0e0;
+    -fx-padding: 8 12;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: #2a2a3e;
+    -fx-background-radius: 5;
+    -fx-border-color: transparent;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 0);
+    -fx-padding: 5;
+}
+
+.combo-box-popup .list-cell {
+    -fx-background-radius: 4;
+    -fx-border-color: transparent;
+    -fx-padding: 8 12;
+}
+
+.combo-box-popup .list-cell:hover, 
+.combo-box-popup .list-cell:selected {
+    -fx-background-color: rgba(66, 165, 245, 0.2);
+    -fx-text-fill: white;
+}
+
+/* --- Стили для CheckBox --- */
+.check-box {
+    -fx-text-fill: #e0e0e0;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.check-box .box {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-background-radius: 3;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-padding: 0.25em;
+}
+
+.check-box:selected .box, 
+.check-box:pressed .box {
+    -fx-background-color: rgba(66, 165, 245, 0.6);
+    -fx-border-color: transparent;
+}
+
+.check-box .mark {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: white;
+    -fx-border-color: transparent;
+}
+
+/* --- Стили для сообщений об ошибках и статусов --- */
+.error-message {
+    -fx-background-color: rgba(255, 87, 87, 0.15);
+    -fx-background-radius: 6;
+    -fx-border-color: rgba(255, 87, 87, 0.4);
+    -fx-border-width: 1;
+    -fx-border-radius: 6;
+    -fx-padding: 10 15;
+    -fx-text-fill: #ffa8a8;
+    -fx-font-size: 13px;
+    -fx-effect: dropshadow(gaussian, rgba(255, 87, 87, 0.1), 10, 0, 0, 0);
+}
+
+.error-message:empty {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+    -fx-effect: none;
+}
+
+.status-bar {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-border-color: rgba(255, 255, 255, 0.1);
+    -fx-border-width: 1 0 0 0;
+}
+
+.status-message {
+    -fx-text-fill: #e0e0e0;
+    -fx-font-size: 13px;
+    -fx-padding: 5;
+}
+
+/* --- Стили для области отчетов --- */
+.report-area {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-background-radius: 10;
+    -fx-text-fill: #e0e0e0;
+    -fx-font-family: 'monospace';
+    -fx-font-size: 13px;
+    -fx-padding: 10;
+    -fx-border-color: rgba(255, 255, 255, 0.1);
+    -fx-border-radius: 10;
+    -fx-border-width: 1;
+}
+
+.report-area .content {
+    -fx-background-color: transparent;
+}
+
+.section-header {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #e0e0e0;
+    -fx-padding: 5 0 5 5;
+    -fx-border-color: transparent transparent rgba(255, 255, 255, 0.2) transparent;
+    -fx-border-width: 0 0 1 0;
+}
+
+/* --- Стили для SplitPane --- */
+.split-pane {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.split-pane > .split-pane-divider {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-padding: 0 1 0 1;
+}
+
+.split-pane:horizontal > .split-pane-divider:hover,
+.split-pane:vertical > .split-pane-divider:hover {
+    -fx-background-color: rgba(66, 165, 245, 0.3);
+    -fx-padding: 0 1 0 1;
+}
+
+/* --- Стили для диалоговых окон --- */
+.dialog-pane {
+    -fx-background-color: #1e1e2e;
+    -fx-padding: 10;
+}
+
+.dialog-pane .header-panel {
+    -fx-background-color: #2d2d44;
+}
+
+.dialog-pane .header-panel .label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #e0e0e0;
+}
+
+.dialog-pane .content.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #e0e0e0;
+}
+
+.dialog-pane .button-bar > .container {
+    -fx-background-color: #1e1e2e;
+}
+
+.dialog-pane .button {
+    -fx-background-color: #1976d2;
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+    -fx-padding: 8 15;
+}
+
+.dialog-pane .button:hover {
+    -fx-background-color: #1565c0;
+}
+
+.dialog-pane .button:pressed {
+    -fx-background-color: #0d47a1;
+}
+
+.dialog-pane .button.cancel-button {
+    -fx-background-color: #424242;
+}
+
+.dialog-pane .button.cancel-button:hover {
+    -fx-background-color: #616161;
+}
+
+.dialog-pane .button.cancel-button:pressed {
+    -fx-background-color: #212121;
+}
+
+.dialog-pane .button.ok-button {
+    -fx-background-color: #1976d2;
+}
+
+.dialog-pane .button.ok-button:hover {
+    -fx-background-color: #1565c0;
+}
+
+.dialog-pane .button.ok-button:pressed {
+    -fx-background-color: #0d47a1;
+}
+
+.dialog-pane .text-field {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-background-radius: 10;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #9e9e9e;
+    -fx-border-color: transparent;
+    -fx-padding: 8 12;
+}
+
+.dialog-pane .combo-box {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-background-radius: 10;
+    -fx-text-fill: white;
+    -fx-padding: 8 12;
+}
+
+.dialog-pane .combo-box .list-cell {
+    -fx-text-fill: white;
+}
+
+/* --- Стили для DatePicker --- */
+.date-picker {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-background-radius: 10;
+    -fx-border-color: transparent;
+}
+
+.date-picker .arrow-button {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-background-radius: 0 10 10 0;
+    -fx-border-color: transparent;
+}
+
+.date-picker .arrow-button .arrow {
+    -fx-background-color: #e0e0e0;
+}
+
+.date-picker .text-field {
+    -fx-background-color: transparent;
+    -fx-text-fill: #e0e0e0;
+    -fx-prompt-text-fill: #9e9e9e;
+    -fx-border-color: transparent;
+}
+
+.date-picker-popup {
+    -fx-background-color: #2a2a3e;
+    -fx-background-radius: 10;
+    -fx-border-color: transparent;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 0);
+}
+
+.date-picker-popup .month-year-pane {
+    -fx-background-color: #1e1e2e;
+    -fx-border-color: transparent;
+}
+
+.date-picker-popup .month-year-pane .label {
+    -fx-text-fill: #e0e0e0;
+}
+
+.date-picker-popup .week-number-cell {
+    -fx-text-fill: #9e9e9e;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.date-picker-popup .calendar-grid {
+    -fx-background-color: #2a2a3e;
+    -fx-border-color: transparent;
+}
+
+.date-picker-popup .calendar-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #e0e0e0;
+    -fx-border-color: transparent;
+}
+
+.date-picker-popup .calendar-cell:hover {
+    -fx-background-color: rgba(66, 165, 245, 0.2);
+}
+
+.date-picker-popup .calendar-cell:selected {
+    -fx-background-color: #42a5f5;
+    -fx-text-fill: white;
+}
+
+.date-picker-popup .calendar-cell:today {
+    -fx-border-color: #42a5f5;
+}
+
+.date-picker-popup .spinner .button {
+    -fx-background-color: #1e1e2e;
+    -fx-text-fill: #e0e0e0;
+    -fx-border-color: transparent;
+}
+
+.date-picker-popup .spinner .button:hover {
+    -fx-background-color: #42a5f5;
+}
+
+.date-picker-popup .spinner .button .left-arrow,
+.date-picker-popup .spinner .button .right-arrow {
+    -fx-background-color: #e0e0e0;
+} 

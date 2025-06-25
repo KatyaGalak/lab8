@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="lab8.client.gui.MainController"
+            styleClass="root"
+            stylesheets="@../global_style.css"
+            prefWidth="900" prefHeight="600">
+
+    <top>
+        <VBox>
+            <MenuBar>
+                <menus>
+                    <Menu fx:id="commandsMenu">
+                        <MenuItem fx:id="clearMenuItem" onAction="#handleClear"/>
+                        <MenuItem fx:id="removeGreaterMenuItem"
+                                  onAction="#handleRemoveGreater"/>
+                        <MenuItem fx:id="addRandomMenuItem" onAction="#handleAddRandom"/>
+                        <MenuItem fx:id="addIfMaxMenuItem"
+                                  onAction="#handleAddIfMax"/>
+                        <MenuItem fx:id="filterByNameMenuItem"
+                                  onAction="#handleFilterByName"/>
+                        <MenuItem fx:id="countByTypeMenuItem" onAction="#handleCountByType"/>
+                        <MenuItem fx:id="maxByIdMenuItem" onAction="#handleMaxById"/>
+                    </Menu>
+                    <Menu fx:id="infoMenu" text="Инфо">
+                        <MenuItem fx:id="infoMenuItem" onAction="#handleInfo"/>
+                        <MenuItem fx:id="historyMenuItem" onAction="#handleHistory"/>
+                    </Menu>
+                </menus>
+            </MenuBar>
+
+            <HBox spacing="10" alignment="CENTER_LEFT" style="-fx-padding: 10 10 5 10;">
+                <Button fx:id="addButton" onAction="#handleAdd" styleClass="button-primary"/>
+                <Button fx:id="visualizationButton" onAction="#handleVisualization" styleClass="button-secondary"/>
+                <Button fx:id="logoutButton" onAction="#handleLogout" styleClass="button-destructive"/>
+                <Region HBox.hgrow="ALWAYS"/>
+
+                <HBox fx:id="localeBox" spacing="5" alignment="CENTER">
+                    <Label fx:id="languageLabel" text="Язык:"/>
+                </HBox>
+
+                <Label fx:id="userLabel" text="Пользователь: " style="-fx-font-weight: bold;"/>
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox spacing="10" style="-fx-padding: 0 10 10 10;">
+            <SplitPane VBox.vgrow="ALWAYS" orientation="VERTICAL" dividerPositions="0.7">
+                <TableView fx:id="tableView" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="idColumn"/>
+                        <TableColumn fx:id="nameColumn"/>
+                        <TableColumn fx:id="coordinatesColumn"/>
+                        <TableColumn fx:id="creationDateColumn"/>
+                        <TableColumn fx:id="priceColumn"/>
+                        <TableColumn fx:id="refundableColumn"/>
+                        <TableColumn fx:id="typeColumn"/>
+                        <TableColumn fx:id="passportIdColumn"/>
+                        <TableColumn fx:id="hairColorColumn"/>
+                        <TableColumn fx:id="birthdayColumn"/>
+                        <TableColumn fx:id="creatorColumn"/>
+                    </columns>
+                </TableView>
+
+                <VBox spacing="5">
+                    <Label fx:id="reportTitleLabel" styleClass="section-header"/>
+                    <ScrollPane fitToWidth="true" fitToHeight="true" VBox.vgrow="ALWAYS">
+                        <TextArea fx:id="reportArea" editable="false" wrapText="true" styleClass="report-area"
+                                  VBox.vgrow="ALWAYS"/>
+                    </ScrollPane>
+                </VBox>
+            </SplitPane>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox spacing="10" alignment="CENTER_LEFT" style="-fx-padding: 5 10 10 10;" styleClass="status-bar">
+            <Label fx:id="statusLabel" styleClass="status-message"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label fx:id="countLabel"/>
+            <Label fx:id="lastUpdateLabel"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>

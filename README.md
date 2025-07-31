@@ -28,3 +28,26 @@
 
 ## Скриншоты работы
 
+| | |
+|-|-|
+| <img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/3d5b7224-cd5e-4f43-8470-33ce49136763" /> | <img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/5643d4f3-0e67-490e-afb2-5e124b7eacdc" /> |
+
+<img width="973" height="518" alt="image" src="https://github.com/user-attachments/assets/2aca2d31-002e-4038-b742-5afafdd553e8" />
+
+| | |
+|-|-|
+| <img width="322" height="511" alt="image" src="https://github.com/user-attachments/assets/d15c268e-4362-4428-aa13-512e1b89fce5" /> | <img width="322" height="511" alt="image" src="https://github.com/user-attachments/assets/08e3101d-9683-4dfb-98b2-a9c04087a337" /> |
+
+<img width="973" height="519" alt="image" src="https://github.com/user-attachments/assets/a7bd2946-dd52-4b75-b674-62fd002262fd" />
+
+<img width="974" height="520" alt="image" src="https://github.com/user-attachments/assets/1290a949-a4ca-4e64-973a-87a047e4cd4f" />
+
+<img width="974" height="523" alt="image" src="https://github.com/user-attachments/assets/6de9ece5-61f9-4bd8-ac7a-ce0942a86ce0" />
+
+
+
+
+
+
+
+
